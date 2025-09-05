@@ -88,6 +88,7 @@ git push -u origin main
 Soure Control(Ctrl+Shift+G) 에서
 init
 Message 작성(필수-버그인듯) 하고 Commit
+SYnc Change
 
 ```
 
