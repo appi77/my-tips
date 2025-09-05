@@ -157,4 +157,4 @@ main 브랜치에 파일 추가 또는 수정 후 push로 사이트 자동 배�
 - VS Code에서 Markdown 작성
 - `mkdocs serve`로 로컬 미리보기
 - `git push` + `mkdocs gh-deploy` → GitHub Pages 자동 배포
-.
+..
