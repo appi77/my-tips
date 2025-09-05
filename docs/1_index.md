@@ -12,10 +12,10 @@ title: Home
 
 ## 📚 주요 카테고리
 
-- [리눅스](linux.md)
-- [네트워크](networking.md)
-- [윈도우](windows.md)
-- [사이트 관리](site_management.md)
+- [리눅스](2_linux.md)
+- [네트워크](4_networking.md)
+- [윈도우](3_windows.md)
+- [사이트 관리](9_site_management.md)
 
 ---
 
