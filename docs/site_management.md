@@ -73,37 +73,35 @@ mkdocs serve
 → 브라우저에서 [http://127.0.0.1:8000](http://127.0.0.1:8000) 접속<br>
 👉 UI 확인 가능
 
-## 5. GitHub에 올리기(TERMINAL)
-
+## 5. GitHub에 올리기
+#### TERMINAL 에사:
 ```bash
 git init
 git add .
 git commit -m "첫 MkDocs 사이트"
 git branch -M main
-git remote add origin https://github.com/username/my-tips.git
+git remote add origin https://github.com/appi77/my-tips.git
 git push -u origin main
 ```
-## 5. GitHub에 올리기(GUI)
-```bash
-Soure Control(Ctrl+Shift+G) 에서
-init
-Message 작성(필수-버그인듯) 하고 Commit
-SYnc Change
+#### 또는 GUI에서:
+- Source Control(Ctrl+Shift+G)에서
+- Initialize Repository 클릭
+- 커밋 메시지 입력 후 'Commit' 클릭
+- 'Sync Changes' 클릭 후 원격 저장소(/appi77/my-tips.git) 선택 또는 지정
 
-```
 
 ## 6. GitHub Pages 자동 배포
-
-- GitHub 저장소 → Settings → Pages → Source:
-  - Deploy from a branch 선택
-  - Branch = `gh-pages` 지정
-- 로컬에서 배포 실행:
-
+TERMINAL에서 배포 실행:
 ```bash
 mkdocs gh-deploy
 ```
+- 명령을 실행하면 사이트 파일이 자동으로 `gh-pages` 브랜치에 업로드됩니다.
 
-→ 자동으로 `gh-pages` 브랜치에 사이트 파일 업로드
+업로드 후, GitHub 저장소에서 다음을 확인하세요:
+- Settings → Pages → Source:
+  - Deploy from a branch 선택
+  - Branch가 `gh-pages`로 설정되어 있는지 확인
+
 → [https://username.github.io/it-tips](https://username.github.io/it-tips) 에서 사이트 확인
 
 ---
@@ -114,4 +112,3 @@ mkdocs gh-deploy
 - `mkdocs serve`로 로컬 미리보기
 - `git push` + `mkdocs gh-deploy` → GitHub Pages 자동 배포
 
-👉 이 흐름으로 쓰면, 진짜 Notion 스타일 개인 지식창고가 GitHub에 생깁니다.
