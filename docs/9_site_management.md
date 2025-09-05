@@ -90,19 +90,63 @@ git push -u origin main
 - 'Sync Changes' 클릭 후 원격 저장소(/appi77/my-tips.git) 선택 또는 지정
 
 
-## 6. GitHub Pages 자동 배포
-TERMINAL에서 배포 실행:
+## 6. GitHub Pages 배포
+
+TERMINAL에서 배포 명령 실행
 ```bash
 mkdocs gh-deploy
 ```
-- 명령을 실행하면 사이트 파일이 자동으로 `gh-pages` 브랜치에 업로드됩니다.
+- 명령 실행 시 사이트 파일 자동으로 `gh-pages` 브랜치 업로드
 
-업로드 후, GitHub 저장소에서 다음을 확인하세요:
-- Settings → Pages → Source:
+업로드 후 GitHub 저장소에서 다음 항목 확인
+- Settings → Pages → Source
   - Deploy from a branch 선택
-  - Branch가 `gh-pages`로 설정되어 있는지 확인
+  - Branch `gh-pages` 설정
 
-→ [https://username.github.io/it-tips](https://username.github.io/it-tips) 에서 사이트 확인
+사이트 확인
+- [https://username.github.io/it-tips](https://username.github.io/it-tips)
+
+
+## 7. GitHub Actions를 통한 자동 배포
+
+GitHub에 push 시 MkDocs 사이트 자동 배포를 위한 워크플로우 파일 설정
+
+워크플로우 파일 경로
+```
+.github/workflows/deploy-mkdocs.yml
+```
+
+워크플로우 파일 예시
+```yaml
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material mkdocs-awesome-pages-plugin
+
+      - name: Build and deploy
+        run: |
+          mkdocs gh-deploy --force
+```
+
+main 브랜치에 파일 추가 또는 수정 후 push로 사이트 자동 배포
 
 ---
 
@@ -113,4 +157,4 @@ mkdocs gh-deploy
 - VS Code에서 Markdown 작성
 - `mkdocs serve`로 로컬 미리보기
 - `git push` + `mkdocs gh-deploy` → GitHub Pages 자동 배포
-
+.
