@@ -1,5 +1,5 @@
 ---
-title: VS Code + MkDocs + GitHub Pages 생성
+title: 사이트 관리
 ---
 
 # 🚀 VS Code + MkDocs + GitHub Pages 생성
