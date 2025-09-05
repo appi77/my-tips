@@ -150,6 +150,11 @@ main 브랜치에 파일 추가 또는 수정 후 push로 사이트 자동 배�
 
 ---
 
+### GitHub Actions 권한 설정
+- 저장소의 Settings → Actions → General에서
+  - **Workflow permissions**를 "Read and write permissions"로 설정
+  - **Allow GitHub Actions to create and approve pull requests**도 체크
+- 위 설정을 해야 gh-pages 브랜치에 정상적으로 배포됨
 
 
 ## 🎯 정리
