@@ -1,4 +1,7 @@
-# OpenText EFC&DAM 설치 환경 만들기
+---
+title: EFC & DAM 설치 환경 만들기
+---
+# OpenText EFC & DAM 설치 환경 만들기
 
 ## **1단계. 시스템 준비**
 
@@ -102,10 +105,7 @@ sudo systemctl restart postgresql
 docker restart <postgres-container>
 ```
 
-[인증서 (self-signed) 적용](%EC%9D%B8%EC%A6%9D%EC%84%9C%20(self-signed)%20%EC%A0%81%EC%9A%A9%201f47aa6ede2380d6948ccf6a640b2064.md)
-
-[NFS 서버 설치 (Ubuntu에서)](NFS%20%EC%84%9C%EB%B2%84%20%EC%84%A4%EC%B9%98%20(Ubuntu%EC%97%90%EC%84%9C)%201f77aa6ede2380f9be31c6f6411cbca3.md)
-
-[Windows 2022 Core NFS 설치](Windows%202022%20Core%20NFS%20%EC%84%A4%EC%B9%98%202187aa6ede23801d846fd844a49ad90e.md)
-
-[동적 NFS 프로비저너 설치](%EB%8F%99%EC%A0%81%20NFS%20%ED%94%84%EB%A1%9C%EB%B9%84%EC%A0%80%EB%84%88%20%EC%84%A4%EC%B9%98%201ff7aa6ede23807795c3d5358507dc7a.md)
+[인증서 (self-signed) 적용](../../보안/1_SSL/인증서-self-signed 적용.md)
+[NFS 서버 설치 (Ubuntu에서)](../../Network/NFS/NFS 서버 설치-Ubuntu.md)
+[Windows 2022 Core NFS 설치](../../Network/NFS/Windows 2022 Core NFS 설치.md)
+[동적 NFS 프로비저너 설치](../../Network/NFS/동적 NFS 프로비저너 설치.md)
