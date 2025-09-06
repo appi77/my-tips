@@ -1,4 +1,5 @@
 site_name: My Tips
+site_url: https://appi77.github.io/my-tips/
 theme:
   name: material
 #nav:

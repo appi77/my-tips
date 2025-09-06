@@ -52,14 +52,18 @@ docs/
 
 ```yaml
 site_name: My Tips
+site_url: https://appi77.github.io/my-tips/
 theme:
   name: material
-
-nav:
-  - 홈: index.md
-  - 리눅스: linux.md
-  - 네트워크: networking.md
-  - 윈도우: windows.md
+#nav:
+#  - 홈: index.md
+#  - 리눅스: linux.md
+#  - 네트워크: networking.md
+#  - 윈도우: windows.md
+#  - 사이트 관리: site_management.md
+#  - MkDocs 매뉴얼: mkdocs_manual.md
+plugins:
+  - awesome-pages
 ```
 
 `.gitignore` 안에 `site/` 폴더 제외 추가
